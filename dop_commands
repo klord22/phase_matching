@@ -1,0 +1,174 @@
+dop2alpha_pm_v3('prn_g17s_24_phase_shift_cor.txt',55.775203333333344,1.0003*6367.21184088,0);
+dop2alpha_pm_v3('prn_g17s_24_phase_shift_cor.txt',55.775203333333344,1.0003*6367.21184088,1);
+
+dop2alpha_pm_v3('prn_c13s_16_phase_shift_cor.txt',57.00045666666666,1.0003*6385.362541538281,0);
+dop2alpha_pm_v3('prn_c13s_16_phase_shift_cor.txt',57.00045666666666,1.0003*6385.362541538281,1);
+
+dop2alpha_pm_v3('prn_c20s_36_phase_shift_cor.txt',57.00397000000001, 1.0003*6363.139538393886,0);
+dop2alpha_pm_v3('prn_c20s_36_phase_shift_cor.txt',57.00397000000001, 1.0003*6363.139538393886,1);
+
+dop2alpha_pm_v3('prn_c23s_20_phase_shift_cor.txt',62.12736666666667, 1.0003*6377.1086768015275,0);
+dop2alpha_pm_v3('prn_c23s_20_phase_shift_cor.txt',62.12736666666667, 1.0003*6377.1086768015275,1);
+
+dop2alpha_pm_v3('prn_c27s_29_phase_shift_cor.txt',55.78531666666666, 1.0003*6360.294186372708,0);
+dop2alpha_pm_v3('prn_c27s_29_phase_shift_cor.txt',55.78531666666666, 1.0003*6360.294186372708,1);
+
+dop2alpha_pm_v3('prn_c28s_36_phase_shift_cor.txt',54.87525333333333, 1.0003*6366.009133095986,0);
+dop2alpha_pm_v3('prn_c28s_36_phase_shift_cor.txt',54.87525333333333, 1.0003*6366.009133095986,1);
+
+dop2alpha_pm_v3('prn_c32s_20_phase_shift_cor.txt',59.68424333333332, 1.0003*6363.147851954873,0);
+dop2alpha_pm_v3('prn_c32s_20_phase_shift_cor.txt',59.68424333333332, 1.0003*6363.147851954873,1);
+
+dop2alpha_pm_v3('prn_c37s_36_phase_shift_cor.txt',57.01375000000001, 1.0003*6386.804250549804,0);
+dop2alpha_pm_v3('prn_c37s_36_phase_shift_cor.txt',57.01375000000001, 1.0003*6386.804250549804,1);
+
+dop2alpha_pm_v3('prn_e05r_04_phase_shift_cor.txt',58.173619999999985, 1.0003*6377.694691152508,0);
+dop2alpha_pm_v3('prn_e05r_04_phase_shift_cor.txt',58.173619999999985, 1.0003*6377.694691152508,1);
+
+dop2alpha_pm_v3('prn_e09r_01_phase_shift_cor.txt',65.33008333333333, 1.0003*6373.723741252513,0);
+dop2alpha_pm_v3('prn_e09r_01_phase_shift_cor.txt',65.33008333333333, 1.0003*6373.723741252513,1);
+
+dop2alpha_pm_v3('prn_e10s_01_phase_shift_cor.txt',62.60734000000001, 1.0003*6374.821392879507,0);
+dop2alpha_pm_v3('prn_e10s_01_phase_shift_cor.txt',62.60734000000001, 1.0003*6374.821392879507,1);
+
+dop2alpha_pm_v3('prn_e11r_31_phase_shift_cor.txt',56.16416, 1.0003*6348.727796920279,0);
+dop2alpha_pm_v3('prn_e11r_31_phase_shift_cor.txt',56.16416, 1.0003*6348.727796920279,1);
+
+dop2alpha_pm_v3('prn_e11s_01_phase_shift_cor.txt',62.15399, 1.0003*6383.70123254051,0);
+dop2alpha_pm_v3('prn_e11s_01_phase_shift_cor.txt',62.15399, 1.0003*6383.70123254051,1);
+
+dop2alpha_pm_v3('',, 1.0003*,);
+
+
+
+
+JUST SETTING
+
+
+dop2alpha_pm_v3_kate('prn_c13s_16_phase_shift_cor.txt',57.00045666666666,1.0003*6385.362541538281,0);
+dop2alpha_pm_v3_kate('prn_c13s_16_phase_shift_cor.txt',57.00045666666666,1.0003*6385.362541538281,1);
+
+dop2alpha_pm_v3_kate('prn_c20s_36_phase_shift_cor.txt',57.00397000000001, 1.0003*6363.139538393886,0);
+dop2alpha_pm_v3_kate('prn_c20s_36_phase_shift_cor.txt',57.00397000000001, 1.0003*6363.139538393886,1);
+
+dop2alpha_pm_v3_kate('prn_c23s_20_phase_shift_cor.txt',62.12736666666667, 1.0003*6377.1086768015275,0);
+dop2alpha_pm_v3_kate('prn_c23s_20_phase_shift_cor.txt',62.12736666666667, 1.0003*6377.1086768015275,1);
+
+dop2alpha_pm_v3_kate('prn_c27s_29_phase_shift_cor.txt',55.78531666666666, 1.0003*6360.294186372708,0);
+dop2alpha_pm_v3_kate('prn_c27s_29_phase_shift_cor.txt',55.78531666666666, 1.0003*6360.294186372708,1);
+
+dop2alpha_pm_v3_kate('prn_c28s_36_phase_shift_cor.txt',54.87525333333333, 1.0003*6366.009133095986,0);
+dop2alpha_pm_v3_kate('prn_c28s_36_phase_shift_cor.txt',54.87525333333333, 1.0003*6366.009133095986,1);
+
+dop2alpha_pm_v3_kate('prn_c32s_20_phase_shift_cor.txt',59.68424333333332, 1.0003*6363.147851954873,0);
+dop2alpha_pm_v3_kate('prn_c32s_20_phase_shift_cor.txt',59.68424333333332, 1.0003*6363.147851954873,1);
+
+dop2alpha_pm_v3_kate('prn_c37s_36_phase_shift_cor.txt',57.01375000000001, 1.0003*6386.804250549804,0);
+dop2alpha_pm_v3_kate('prn_c37s_36_phase_shift_cor.txt',57.01375000000001, 1.0003*6386.804250549804,1);
+
+dop2alpha_pm_v3_kate('prn_e10s_01_phase_shift_cor.txt',62.60734000000001, 1.0003*6374.821392879507,0);
+dop2alpha_pm_v3_kate('prn_e10s_01_phase_shift_cor.txt',62.60734000000001, 1.0003*6374.821392879507,1);
+
+dop2alpha_pm_v3_kate('prn_e11s_01_phase_shift_cor.txt',62.15399, 1.0003*6383.70123254051,0);
+dop2alpha_pm_v3_kate('prn_e11s_01_phase_shift_cor.txt',62.15399, 1.0003*6383.70123254051,1);
+
+dop2alpha_pm_v3_kate('prn_e12s_01_phase_shift_cor.txt',64.28819333333334, 1.0003*6363.048540224045,0);
+dop2alpha_pm_v3_kate('prn_e12s_01_phase_shift_cor.txt',64.28819333333334, 1.0003*6363.048540224045,1);
+
+
+
+
+*weird*
+dop2alpha_pm_v3_kate('prn_e15s_04_phase_shift_cor.txt',57.19250666666666, 1.0003*6369.862805818942,0);
+dop2alpha_pm_v3_kate('prn_e15s_04_phase_shift_cor.txt',57.19250666666666, 1.0003*6369.862805818942,1);
+
+
+
+
+
+
+dop2alpha_pm_v3_kate('prn_e19s_31_phase_shift_cor.txt',57.11732, 1.0003*6367.448476639707,0);
+dop2alpha_pm_v3_kate('prn_e19s_31_phase_shift_cor.txt',57.11732, 1.0003*6367.448476639707,1);
+
+dop2alpha_pm_v3_kate('prn_e21s_31_phase_shift_cor.txt',57.00588000000001, 1.0003*6381.346730001969,0);
+dop2alpha_pm_v3_kate('prn_e21s_31_phase_shift_cor.txt',57.00588000000001, 1.0003*6381.346730001969,1);
+
+dop2alpha_pm_v3_kate('prn_e26s_12_phase_shift_cor.txt',56.01562666666666, 1.0003*6356.665615137176,0);
+dop2alpha_pm_v3_kate('prn_e26s_12_phase_shift_cor.txt',56.01562666666666, 1.0003*6356.665615137176,1);
+
+dop2alpha_pm_v3_kate('prn_e27s_01_phase_shift_cor.txt',65.43234333333334, 1.0003*6367.2006960204435,0);
+dop2alpha_pm_v3_kate('prn_e27s_01_phase_shift_cor.txt',65.43234333333334, 1.0003*6367.2006960204435,1);
+
+dop2alpha_pm_v3_kate('prn_e33s_01_phase_shift_cor.txt',65.30914333333332, 1.0003*6347.438319216297,0);
+dop2alpha_pm_v3_kate('prn_e33s_01_phase_shift_cor.txt',65.30914333333332, 1.0003*6347.438319216297,1);
+
+dop2alpha_pm_v3_kate('prn_g04s_30_phase_shift_cor.txt',66.05579666666668, 1.0003*6378.826320579745,0);
+dop2alpha_pm_v3_kate('prn_g04s_30_phase_shift_cor.txt',66.05579666666668, 1.0003*6378.826320579745,1);
+
+dop2alpha_pm_v3_kate('prn_g05s_15_phase_shift_cor.txt',56.440773333333325, 1.0003*6362.255704499718,0);
+dop2alpha_pm_v3_kate('prn_g05s_15_phase_shift_cor.txt',56.440773333333325, 1.0003*6362.255704499718,1);
+
+dop2alpha_pm_v3_kate('prn_g06s_14_phase_shift_cor.txt',65.17612333333332, 1.0003*6348.799008633217,0);
+dop2alpha_pm_v3_kate('prn_g06s_14_phase_shift_cor.txt',65.17612333333332, 1.0003*6348.799008633217,1);
+
+dop2alpha_pm_v3_kate('prn_g07s_13_phase_shift_cor.txt',59.23391666666668, 1.0003*6386.521610260716,0);
+dop2alpha_pm_v3_kate('prn_g07s_13_phase_shift_cor.txt',59.23391666666668, 1.0003*6386.521610260716,1);
+
+dop2alpha_pm_v3_kate('prn_g09s_14_phase_shift_cor.txt',61.8366, 1.0003*6375.333473866002,0);
+dop2alpha_pm_v3_kate('prn_g09s_14_phase_shift_cor.txt',61.8366, 1.0003*6375.333473866002,1);
+
+dop2alpha_pm_v3_kate('prn_g10s_24_phase_shift_cor.txt',55.42742333333334, 1.0003*6383.198120637584,0);
+dop2alpha_pm_v3_kate('prn_g10s_24_phase_shift_cor.txt',55.42742333333334, 1.0003*6383.198120637584,1);
+
+
+
+
+
+
+dop2alpha_pm_v3_kate('prn_g11s_14_phase_shift_cor.txt',62.44872333333335, 1.0003*6357.472838048772,0);
+dop2alpha_pm_v3_kate('prn_g11s_14_phase_shift_cor.txt',62.44872333333335, 1.0003*6357.472838048772,1);
+
+dop2alpha_pm_v3_kate('prn_g14s_24_phase_shift_cor.txt',55.93296999999999, 1.0003*6380.264045016795,0);
+dop2alpha_pm_v3_kate('prn_g14s_24_phase_shift_cor.txt',55.93296999999999, 1.0003*6380.264045016795,1);
+
+dop2alpha_pm_v3_kate('prn_g17s_24_phase_shift_cor.txt',55.775203333333344, 1.0003*6365.30225020294,0);
+dop2alpha_pm_v3_kate('prn_g17s_24_phase_shift_cor.txt',55.775203333333344, 1.0003*6365.30225020294,1);
+
+dop2alpha_pm_v3_kate('prn_g19s_24_phase_shift_cor.txt',56.04000666666668, 1.0003*6362.0504038442,0);
+dop2alpha_pm_v3_kate('prn_g19s_24_phase_shift_cor.txt',56.04000666666668, 1.0003*6362.0504038442,1);
+
+dop2alpha_pm_v3_kate('prn_g20s_13_phase_shift_cor.txt',58.932959999999994, 1.0003*6361.6831277923975,0);
+dop2alpha_pm_v3_kate('prn_g20s_13_phase_shift_cor.txt',58.932959999999994, 1.0003*6361.6831277923975,1);
+
+dop2alpha_pm_v3_kate('prn_g23s_24_phase_shift_cor.txt',55.37632666666668, 1.0003*6377.544061109292,0);
+dop2alpha_pm_v3_kate('prn_g23s_24_phase_shift_cor.txt',55.37632666666668, 1.0003*6377.544061109292,1);
+
+dop2alpha_pm_v3_kate('prn_g30s_15_phase_shift_cor.txt',56.631986666666684, 1.0003*6386.775050323654,0);
+dop2alpha_pm_v3_kate('prn_g30s_15_phase_shift_cor.txt',56.631986666666684, 1.0003*6386.775050323654,1);
+
+dop2alpha_pm_v3_kate('prn_r01s_13_phase_shift_cor.txt',60.96344333333332, 1.0003*6362.751979796133,0);
+dop2alpha_pm_v3_kate('prn_r01s_13_phase_shift_cor.txt',60.96344333333332, 1.0003*6362.751979796133,1);
+
+dop2alpha_pm_v3_kate('prn_r02s_04_phase_shift_cor.txt',56.67784333333332, 1.0003*6366.487358594397,0);
+dop2alpha_pm_v3_kate('prn_r02s_04_phase_shift_cor.txt',56.67784333333332, 1.0003*6366.487358594397,1);
+
+dop2alpha_pm_v3_kate('prn_r03s_14_phase_shift_cor.txt',55.99262999999999, 1.0003*6352.134457464006,0);
+dop2alpha_pm_v3_kate('prn_r03s_14_phase_shift_cor.txt',55.99262999999999, 1.0003*6352.134457464006,1);
+
+dop2alpha_pm_v3_kate('prn_r08s_12_phase_shift_cor.txt',65.52900000000001, 1.0003*6364.005138707801,0);
+dop2alpha_pm_v3_kate('prn_r08s_12_phase_shift_cor.txt',65.52900000000001, 1.0003*6364.005138707801,1);
+
+dop2alpha_pm_v3_kate('prn_r11s_02_phase_shift_cor.txt',65.33637333333333, 1.0003*6366.519721552179,0);
+dop2alpha_pm_v3_kate('prn_r11s_02_phase_shift_cor.txt',65.33637333333333, 1.0003*6366.519721552179,1);
+
+dop2alpha_pm_v3_kate('prn_r12s_04_phase_shift_cor.txt',57.01359333333334, 1.0003*6384.723560100175,0);
+dop2alpha_pm_v3_kate('prn_r12s_04_phase_shift_cor.txt',57.01359333333334, 1.0003*6384.723560100175,1);
+
+dop2alpha_pm_v3_kate('prn_r13s_15_phase_shift_cor.txt',55.32320666666668, 1.0003*6382.582527994255,0);
+dop2alpha_pm_v3_kate('prn_r13s_15_phase_shift_cor.txt',55.32320666666668, 1.0003*6382.582527994255,1);
+
+dop2alpha_pm_v3_kate('prn_r21s_04_phase_shift_cor.txt',56.727403333333335, 1.0003*6371.736775567077,0);
+dop2alpha_pm_v3_kate('prn_r21s_04_phase_shift_cor.txt',56.727403333333335, 1.0003*6371.736775567077,1);
+
+dop2alpha_pm_v3_kate('prn_r22s_14_phase_shift_cor.tx',58.223226666666655, 1.0003*6364.551329200611,0);
+dop2alpha_pm_v3_kate('prn_r22s_14_phase_shift_cor.tx',58.223226666666655, 1.0003*6364.551329200611,1);

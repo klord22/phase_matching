@@ -57,22 +57,18 @@
 
 
 
-function dop2alpha_pm(file_name, nrec, amin)
+function dop2alpha_pm_v3(file_name, nrec, amin,norp)
 
 k = (1.57542e9 / 299792.458) * 2*pi;  % rad/km
-
 % wavenumber = f/c
 
-[time, x_rec, y_rec, z_rec, u_rec, v_rec, w_rec, x_gps, y_gps, z_gps, u_gps, v_gps, w_gps, ex_ph, loss, ex_dop] = read_ar_v1(file_name);
+[time, x_rec, y_rec, z_rec, u_rec, v_rec, w_rec, x_gps, y_gps, z_gps, u_gps, v_gps, w_gps, ex_ph, loss, ex_dop] = read_ar_v1_test(file_name);
 r_gps_rec = sqrt((x_gps-x_rec).^2 + (y_gps-y_rec).^2 + (z_gps-z_rec).^2); % vector
-
 r_rec     = sqrt(x_rec.^2 + y_rec.^2 + z_rec.^2);
 r_gps     = sqrt(x_gps.^2 + y_gps.^2 + z_gps.^2);  % km
 
 theta = acos( (x_gps.*x_rec + y_gps.*y_rec + z_gps.*z_rec) ./ r_gps ./ r_rec );  % rad
-
 dist  = sqrt( (x_gps-x_rec).^2 + (y_gps-y_rec).^2 + (z_gps-z_rec).^2); %vs r_gps_rec ??
-
 phi_geo = k * dist;                        % rad  (geometric phase)
 ex_ph = cumsum(ex_dop);                 % Bing didn't correct ex_ph, only ex_dop
 % ex_ph = -1*np.cumsum(ex_dop+0.05)   % case 6
@@ -89,14 +85,37 @@ end
 % plot(time,elev);
 
 
-% Works for both setting and rising
-i_0 = 1;
-while elev(i_0)>0
-    i_0 = i_0 + 1;
+%% NEW KATE STUFF
+rors = file_name(8);
+
+if rors == 'r' %rising
+
+    i_0 = length(elev);
+    while elev(i_0)>0
+        i_0 = i_0 - 1;
+    end
+    % now i_0 and before is negative, after i_0 is positive
+
+
+else           %setting
+   
+    i_0 = 1;
+    while elev(i_0)>0
+        i_0 = i_0 + 1;
+    end
+    % now i_0 and after is negative, before i_0 is positive
+
 end
 
-
-
+%% ERIC
+% Works for both setting and rising - this only works if flip before this
+% i_0 = 1;
+% while elev(i_0)>0
+%     i_0 = i_0 + 1;
+% end
+% 
+% 
+% 
 if file_name(8)=='s'  % Setting negative
     time  = time(i_0:end);
     theta = theta(i_0:end);
@@ -106,33 +125,127 @@ if file_name(8)=='s'  % Setting negative
     phi   = phi(i_0:end);
     
 else    % Rising negative
+    %the original code
     time  = flip(time(i_0:end));
     theta = flip(theta(i_0:end));
     r_gps = flip(r_gps(i_0:end));
     r_rec = flip(r_rec(i_0:end));
     phi   = phi_geo - ex_ph*1e-3*k;          % rad  (total phase)
     phi   = flip(phi(i_0:end));
-    
+
 end
 
+
+%% KATE
+% if norp == 1 %negative
+%     if rors == 'r' %rising
+%         %normal
+% 
+% %         ind_range = [1:i_0];
+%         phi   = phi_geo + ex_ph*1e-3*k; % rad  (total phase)
+% 
+%         time  = time(1:i_0);
+%         theta = theta(1:i_0);
+%         r_gps = r_gps(1:i_0);
+%         r_rec = r_rec(1:i_0);        
+%         phi   = phi(1:i_0);
+% 
+%     else           %setting
+%         %flip
+% %         ind_range = [i_0:end]
+%         disp("NEGATIVE SETTING")
+%         phi   = phi_geo - ex_ph*1e-3*k;          % rad  (total phase)
+% 
+%         time  = time(i_0:end);
+%         theta = theta(i_0:end);
+%         r_gps = r_gps(i_0:end);
+%         r_rec = r_rec(i_0:end);
+%         phi   = phi(i_0:end);
+%         
+%         disp(["i_0 here", i_0])
+%         disp(["length of phi", length(phi)])
+% 
+% 
+%     end
+% 
+% 
+% else         %positive
+%     if rors == 'r' %rising
+%         %flip
+% %         ind_range = [i_0+1:end];
+%         phi   = phi_geo - ex_ph*1e-3*k;          % rad  (total phase)
+% 
+%         time  = time(i_0+1:end);
+%         theta = theta(i_0+1:end);
+%         r_gps = r_gps(i_0+1:end);
+%         r_rec = r_rec(i_0+1:end);
+%         phi   = phi(i_0+1:end);
+% 
+%     else           %setting
+%         %normal
+% %         ind_range = [1:i_0-1];
+%         phi   = phi_geo + ex_ph*1e-3*k;          % rad  (total phase)
+% 
+%         time  = time(1:i_0-1);
+%         theta = theta(1:i_0-1);
+%         r_gps = r_gps(1:i_0-1);
+%         r_rec = r_rec(1:i_0-1);
+%         phi   = phi(1:i_0-1);
+%     end
+% end
+
+% plot(time, theta) %this looks good
+% title("Theta vs Time")
+% 
+% plot(r_gps, r_rec) %this looks good
+% title("r's")
+
+disp(["i_0", i_0])
+disp(["elev length",length(elev)])
+disp(["time length", length(time)])
+
+% plot(phi)
+
+%% END KATE 
 
 % amin = 6370
 amax = amin+20;
 a = amin:1e-3:amax;
-[a_out, alpha, v] = pm_v2_air(time, ones(length(elev)-i_0+1,1), a, theta, r_gps, r_rec, phi, k, 1+nrec*1e-6, 1);
+
+% set amplitude equal to one
+% amp_1 = ones(length(elev)-i_0+1,1);
+amp_1 = ones(length(time),1); %Kate
+
+% convert refractivity to refractive index
+n_i_rec = 1+nrec*1e-6;
+
+save("dop2alp_midfile_var");
+
+% [a_out, alpha, v] = pm_v3_air(time, ones(length(elev)-i_0+1,1), a, theta, r_gps, r_rec, phi, k, 1+nrec*1e-6, 1);
+[a_out, alpha, v] = pm_v3_air(time, amp_1, a, theta, r_gps, r_rec, phi, k, n_i_rec, norp);
 % norp=1 => negative elevation,   norp=0 => positive elevation
 % a_out, alpha, v = pm.pm_v2_air(time[1500:i_0], np.ones(i_0-1500), a, theta[1500:i_0], r_gps[1500:i_0], r_rec[1500:i_0], phi[1500:i_0], k, 1+nrec*1e-6, 0)
 % a_out, alpha, v = pm.pm_v2_air(time[i_0:], np.ones(len(time)-i_0), a, theta[i_0:], r_gps[i_0:], r_rec[i_0:], phi[i_0:], k, 1+nrec*1e-6, 1)
 
+figure();
+plot(alpha, a_out(2:end));
+title("Bending Angle vs Impact Parameter");
+xlabel("Alpha (rad)")
+ylabel("Impact Parameter (km)")
 
-% figure();
-% plot(alpha, a_out(2:end));
+if norp == 1
+    output_alpha = sprintf('Output_alpha_neg_%8s.txt',file_name(5:12));
+    output_v     = sprintf('Output_v_neg_%8s.txt',file_name(5:12));
+    file_alpha = fopen(output_alpha,'w');
+    file_v     = fopen(output_v,'w');
+else
+    output_alpha = sprintf('Output_alpha_pos_%8s.txt',file_name(5:12));
+    output_v     = sprintf('Output_v_pos_%8s.txt',file_name(5:12));
+    file_alpha = fopen(output_alpha,'w');
+    file_v     = fopen(output_v,'w');
+end
 
 
-output_alpha = sprintf('Output_alpha_neg_%8s.txt',file_name(5:12));
-output_v     = sprintf('Output_v_neg_%8s.txt',file_name(5:12));
-file_alpha = fopen(output_alpha,'w');
-file_v     = fopen(output_v,'w');
 fprintf(file_alpha,'%8.3f  %12.8f\n',[a_out(2:end); alpha']);
 fprintf(file_v,'%8.3f  %12.8f  %12.8f\n',[a_out; real(v'); imag(v')]);
 fclose(file_alpha);

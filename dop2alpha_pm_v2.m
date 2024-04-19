@@ -57,22 +57,18 @@
 
 
 
-function dop2alpha_pm(file_name, nrec, amin)
+function dop2alpha_pm_v2(file_name, nrec, amin)
 
 k = (1.57542e9 / 299792.458) * 2*pi;  % rad/km
-
 % wavenumber = f/c
 
-[time, x_rec, y_rec, z_rec, u_rec, v_rec, w_rec, x_gps, y_gps, z_gps, u_gps, v_gps, w_gps, ex_ph, loss, ex_dop] = read_ar_v1(file_name);
+[time, x_rec, y_rec, z_rec, u_rec, v_rec, w_rec, x_gps, y_gps, z_gps, u_gps, v_gps, w_gps, ex_ph, loss, ex_dop] = read_ar_v1_test(file_name);
 r_gps_rec = sqrt((x_gps-x_rec).^2 + (y_gps-y_rec).^2 + (z_gps-z_rec).^2); % vector
-
 r_rec     = sqrt(x_rec.^2 + y_rec.^2 + z_rec.^2);
 r_gps     = sqrt(x_gps.^2 + y_gps.^2 + z_gps.^2);  % km
 
 theta = acos( (x_gps.*x_rec + y_gps.*y_rec + z_gps.*z_rec) ./ r_gps ./ r_rec );  % rad
-
 dist  = sqrt( (x_gps-x_rec).^2 + (y_gps-y_rec).^2 + (z_gps-z_rec).^2); %vs r_gps_rec ??
-
 phi_geo = k * dist;                        % rad  (geometric phase)
 ex_ph = cumsum(ex_dop);                 % Bing didn't correct ex_ph, only ex_dop
 % ex_ph = -1*np.cumsum(ex_dop+0.05)   % case 6
@@ -115,19 +111,29 @@ else    % Rising negative
     
 end
 
-
 % amin = 6370
 amax = amin+20;
 a = amin:1e-3:amax;
-[a_out, alpha, v] = pm_v2_air(time, ones(length(elev)-i_0+1,1), a, theta, r_gps, r_rec, phi, k, 1+nrec*1e-6, 1);
+
+% set amplitude equal to one
+amp_1 = ones(length(elev)-i_0+1,1);
+
+% convert refractivity to refractive index
+n_i_rec = 1+nrec*1e-6;
+
+save("dop2alp_midfile_var");
+
+% [a_out, alpha, v] = pm_v3_air(time, ones(length(elev)-i_0+1,1), a, theta, r_gps, r_rec, phi, k, 1+nrec*1e-6, 1);
+[a_out, alpha, v] = pm_v3_air(time, amp_1, a, theta, r_gps, r_rec, phi, k, n_i_rec, 1);
 % norp=1 => negative elevation,   norp=0 => positive elevation
 % a_out, alpha, v = pm.pm_v2_air(time[1500:i_0], np.ones(i_0-1500), a, theta[1500:i_0], r_gps[1500:i_0], r_rec[1500:i_0], phi[1500:i_0], k, 1+nrec*1e-6, 0)
 % a_out, alpha, v = pm.pm_v2_air(time[i_0:], np.ones(len(time)-i_0), a, theta[i_0:], r_gps[i_0:], r_rec[i_0:], phi[i_0:], k, 1+nrec*1e-6, 1)
 
-
-% figure();
-% plot(alpha, a_out(2:end));
-
+figure();
+plot(alpha, a_out(2:end));
+title("Bending Angle vs Impact Parameter");
+xlabel("Alpha (rad)")
+ylabel("Impact Parameter (km)")
 
 output_alpha = sprintf('Output_alpha_neg_%8s.txt',file_name(5:12));
 output_v     = sprintf('Output_v_neg_%8s.txt',file_name(5:12));
