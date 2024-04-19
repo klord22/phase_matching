@@ -1,0 +1,74 @@
+kwang@kaibab:~> matlab
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2017 The MathWorks, Inc.
+                   R2017b (9.3.0.713579) 64-bit (maci64)
+                             September 14, 2017
+
+
+For online documentation, see http://www.mathworks.com/support
+For product information, visit www.mathworks.com.
+
+>> cd '/ags/projects/hiaper/2018.023_ar2018/nret/2018.026_rf01/sept/g14s-23/phase_match'
+>> addpath('/ags/projects/hiaper/code_pm_ar2018');
+>> addpath('/ags/projects/hiaper/2018.023_ar2018/nret/2018.026_rf01/sept/g14s-23/bend_shift');
+>> file_name = 'prn_g14s_g23_500808_phase_ar18_rf01_v2_shift_v2_cor.txt';
+>> nrec = 61.6354;
+>> amin = 6390;
+>> dop2alpha_pm(file_name, nrec, amin);
+
+
+
+## FF04 geom files location##
+addpath('/ags/projects/hiaper/2010.215_predict/exphs_ol/2010.275_FF04_v2015-08-21/olchanlook/CH1_cli');
+
+FF04  PRN01-19 (s)
+dop2alpha_pm('prn_g01s_g19_geom.txt',66.741,6380);
+
+FF04  PRN03-07 (s)
+dop2alpha_pm('prn_g03s_g07_geom.txt',60.927,6375);
+
+FF04  PRN04-28 (r)
+dop2alpha_pm('prn_g04r_g28_geom.txt',61.978,6360);
+
+FF04  PRN06-11 (s)
+dop2alpha_pm('prn_g06s_g11_geom.txt',65.589,6370);
+
+FF04  PRN07-28 (s)
+dop2alpha_pm('prn_g07s_g28_geom.txt',61.297,6355);
+
+FF04  PRN08-19 (r)
+dop2alpha_pm('prn_g08r_g19_geom.txt',66.684,6360);
+
+FF04  PRN09-28 (r)
+dop2alpha_pm('prn_g09r_g28_geom.txt',60.229,6365);
+
+FF04  PRN13-07 (s)
+dop2alpha_pm('prn_g13s_g07_geom.txt',61.694,6345);
+
+FF04  PRN15-28 (r)
+dop2alpha_pm('prn_g15r_g28_geom.txt',60.663,6365);
+
+FF04  PRN16-19 (s)
+dop2alpha_pm('prn_g16s_g19_geom.txt',66.586,6380);
+
+FF04  PRN17-19 (r)
+dop2alpha_pm('prn_g17r_g19_geom.txt',66.478,6363);
+
+FF04  PRN19-28 (s)
+dop2alpha_pm('prn_g19s_g28_geom.txt',59.949,6375);
+
+FF04  PRN23-07 (s)
+dop2alpha_pm('prn_g23s_g07_geom.txt',63.003,6345);
+
+FF04  PRN24-28 (s)
+dop2alpha_pm('prn_g24s_g28_geom.txt',59.284,6365);
+
+FF04  PRN27-28 (r)
+dop2alpha_pm('prn_g27r_g28_geom.txt',60.222,6360);
+
+FF04  PRN28-19 (r)
+dop2alpha_pm('prn_g28r_g19_geom.txt',66.835,6380);
+
+FF04  PRN31-19 (s)
+dop2alpha_pm('prn_g31s_g19_geom.txt',66.76,6360);
