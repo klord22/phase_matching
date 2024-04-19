@@ -1,7 +1,5 @@
 function [a_out, alpha, v] = pm_v2_air(t, snr, a, theta, r_1, r_2, phi, k, n, norp)
 
-
-
 v = zeros(length(a),1);
 rate_inp = 50;
 t_inp = t(1):(t(2)-t(1))/rate_inp:t(length(t));

@@ -60,15 +60,19 @@
 function dop2alpha_pm(file_name, nrec, amin)
 
 k = (1.57542e9 / 299792.458) * 2*pi;  % rad/km
+
 % wavenumber = f/c
 
 [time, x_rec, y_rec, z_rec, u_rec, v_rec, w_rec, x_gps, y_gps, z_gps, u_gps, v_gps, w_gps, ex_ph, loss, ex_dop] = read_ar_v1(file_name);
 r_gps_rec = sqrt((x_gps-x_rec).^2 + (y_gps-y_rec).^2 + (z_gps-z_rec).^2); % vector
+
 r_rec     = sqrt(x_rec.^2 + y_rec.^2 + z_rec.^2);
 r_gps     = sqrt(x_gps.^2 + y_gps.^2 + z_gps.^2);  % km
 
 theta = acos( (x_gps.*x_rec + y_gps.*y_rec + z_gps.*z_rec) ./ r_gps ./ r_rec );  % rad
+
 dist  = sqrt( (x_gps-x_rec).^2 + (y_gps-y_rec).^2 + (z_gps-z_rec).^2); %vs r_gps_rec ??
+
 phi_geo = k * dist;                        % rad  (geometric phase)
 ex_ph = cumsum(ex_dop);                 % Bing didn't correct ex_ph, only ex_dop
 % ex_ph = -1*np.cumsum(ex_dop+0.05)   % case 6
