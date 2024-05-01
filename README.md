@@ -1,3 +1,6 @@
+
+
+
 pm_v4_air.m
 Calculates bending angle profile of one occultation
 Called in dop2alpha_pm_v4.m
@@ -31,3 +34,8 @@ For one IOP
 To get from excess phase files to OmB for entire IOP:
 loop_dop2alpha.m: excess phase files -> bending angle files (PM)
 plot_all_v1.m: 2 types of bending angle files -> OmB plots
+
+
+# Feature requests
+Put these in a folder structure like this:
+/ags/soft/code_standards/code_folder_example/code_xxx_yyyy-mm-dd
